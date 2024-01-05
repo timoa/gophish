@@ -109,7 +109,7 @@ func clickLink(t *testing.T, ctx *testContext, rid string, expectedHTML string) 
 		t.Fatalf("error reading payload from / endpoint response: %v", err)
 	}
 	if !bytes.Equal(got, []byte(expectedHTML)) {
-		t.Fatalf("invalid response received from / endpoint. expected %s got %s", got, expectedHTML)
+		t.Fatalf("invalid response received from / endpoint. expected %s got %s", expectedHTML, got)
 	}
 }
 
